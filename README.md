@@ -1,9 +1,9 @@
 # Guess the number game
 
-The game
--------
 ![png](images4readme/logo-guess.png)
 
+The game
+-------
 One of the simplest two-player games is “Guess the number”.
 The first player thinks of a secret number in some known range
 while the second player attempts to guess the number.
