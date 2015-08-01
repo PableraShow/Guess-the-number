@@ -1,5 +1,7 @@
 # Guess the number game
 
+*Stars, Forks and Pull Requests are welcome :)*
+
 ![png](images4readme/logo-guess.png)
 
 The game
@@ -26,4 +28,4 @@ Your final addition will be to restrict the player to a limited number of guesse
 
 ![jpg](images4readme/logo-python.jpg)
 
-*Stars and Forks are welcome :)*
+Thanks for read it!
