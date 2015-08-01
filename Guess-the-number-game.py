@@ -4,17 +4,18 @@
 
 import random
 import simplegui
-# Initialize the counter to 0 to indicate how many attempts we played
-count = 0
 
 # helper function to start and restart the game
 def new_game():
+    # Initialize the counter to 0 to indicate how many attempts we played
+    global count
+    count = 0
     # initialize global variables secret number
     global secret_number
     # secret_number is a random number from 0 to 100, not included.
     secret_number = random.randrange(0, 100)
     # We return the secret_numbre and close the function
-    return secret_number
+    return count, secret_number
 
 def range100():
     """button that changes the range to [0,100) and starts a new game"""
@@ -38,7 +39,7 @@ def range1000():
     
 def input_guess(guess):
     # We transform the string 'guess' to an integer number
-    guess =  int(guess)
+    guess = int(guess)
     # We print a output and we transform the integer number for a new string again to avoid an error
     print 'Guess was ' + str(guess)
     # contamos el numero de veces que hemos preguntado
@@ -52,10 +53,14 @@ def input_guess(guess):
     # We increment the count of the games
     global count
     count += 1
-    print 'Llevas ' + str(count) + ' intentos\n'
+    # We print the result of the trials gamed
+    print 'you carry ' + str(count) + ' trials played\n'
+    # If our count it's the more than or the same to seven
+    # print Game Over and Start a new game 
     if count >= 7:
-        print 'Game over'
-        #new_game()
+        print 'Game over\nStart a new game\n'
+        # start a new game
+        new_game()
     # We close the function
     return
     
@@ -70,9 +75,3 @@ range0to1000 = frame.add_button('Range between 0 to 1000)', range1000, 120)
 
 # call new_game 
 new_game()
-
-
-
-
-
-
